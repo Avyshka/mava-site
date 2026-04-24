@@ -9,6 +9,13 @@
         We create small, polished web games with simple rules, fast sessions,
         and playful visual style.
       </p>
+
+      <div class="games">
+        <a class="game-card" href="/projects/orbit-dodge/">
+          <h2>Orbit Dodge</h2>
+          <p>Arcade survival about switching orbits</p>
+        </a>
+      </div>
     </section>
   </main>
 </template>
