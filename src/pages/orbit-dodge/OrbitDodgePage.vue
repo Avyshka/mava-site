@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const baseUrl = import.meta.env.BASE_URL
+</script>
+
 <template>
   <main class="game-page">
     <section class="game-hero">
-      <a class="back-link" href="/">← Mava Studio</a>
+      <a class="back-link" :href="baseUrl">← Mava Studio</a>
 
       <p class="eyebrow">Arcade Web Game</p>
 
