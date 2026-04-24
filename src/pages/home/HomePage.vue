@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const baseUrl = import.meta.env.BASE_URL
+</script>
+
 <template>
   <main class="home-page">
     <section class="hero">
@@ -11,7 +15,7 @@
       </p>
 
       <div class="games">
-        <a class="game-card" href="/projects/orbit-dodge/">
+        <a class="game-card" :href="`${baseUrl}projects/orbit-dodge/`">
           <h2>Orbit Dodge</h2>
           <p>Arcade survival about switching orbits</p>
         </a>
