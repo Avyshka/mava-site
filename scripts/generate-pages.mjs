@@ -10,7 +10,7 @@ const games = JSON.parse(fs.readFileSync(gamesPath, "utf-8"));
 
 function ensureDir(dir) {
     if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, {recursive: true});
     }
 }
 
@@ -20,8 +20,16 @@ function createLandingHtml(game) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>${game.title} / Mava Studio</title>
     <meta name="description" content="${game.description}" />
+
+    <meta property="og:title" content="${game.title}" />
+    <meta property="og:description" content="${game.description}" />
+    <meta property="og:image" content="/mava-site/${game.cover}" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
     <div id="app"></div>
@@ -37,7 +45,15 @@ function createPlayHtml(game) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Play ${game.title} / Mava Studio</title>
+
+    <meta property="og:title" content="Play ${game.title}" />
+    <meta property="og:description" content="${game.description}" />
+    <meta property="og:image" content="/mava-site/${game.cover}" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
     <div id="app"></div>

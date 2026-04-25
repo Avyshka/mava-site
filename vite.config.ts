@@ -1,6 +1,6 @@
 import vue from "@vitejs/plugin-vue";
 import {defineConfig} from "vite";
-import {createViteInputs} from "./scripts/create-vite-inputs.mjs";
+import {createViteInputs} from "./scripts/create-vite-inputs";
 
 export default defineConfig({
     base: "/mava-site/",
