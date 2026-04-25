@@ -19,7 +19,7 @@ function createLandingHtml(game) {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <title>${game.title} / Mava Studio</title>
     <meta name="description" content="${game.description}" />
@@ -44,7 +44,7 @@ function createPlayHtml(game) {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <title>Play ${game.title} / Mava Studio</title>
 
