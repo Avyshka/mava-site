@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const baseUrl = import.meta.env.BASE_URL
+import {games} from "../../lib/games";
+
+const baseUrl = import.meta.env.BASE_URL;
 </script>
 
 <template>
@@ -15,9 +17,14 @@ const baseUrl = import.meta.env.BASE_URL
       </p>
 
       <div class="games">
-        <a class="game-card" :href="`${baseUrl}projects/orbit-dodge/`">
-          <h2>Orbit Dodge</h2>
-          <p>Arcade survival about switching orbits</p>
+        <a
+            v-for="game in games"
+            :key="game.id"
+            class="game-card"
+            :href="`${baseUrl}projects/${game.id}/`"
+        >
+          <h2>{{ game.title }}</h2>
+          <p>{{ game.descriptionShort }}</p>
         </a>
       </div>
     </section>

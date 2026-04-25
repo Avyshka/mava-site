@@ -1,0 +1,16 @@
+[
+  {
+    "id": "orbit-dodge",
+    "title": "Orbit Dodge",
+    "subtitle": "Arcade Web Game",
+    "descriptionShort": "Arcade survival about switching orbits",
+    "description": "Switch between orbits, dodge incoming hazards, collect bonuses, and survive as long as you can.",
+    "cover": "images/orbit-dodge-cover.png",
+    "tags": [
+      "Arcade",
+      "Fast Sessions",
+      "One Button"
+    ],
+    "buildPath": "games/orbit-dodge/index.html"
+  }
+]
