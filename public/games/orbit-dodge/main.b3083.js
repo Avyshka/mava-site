@@ -19,9 +19,30 @@ window.boot = function () {
         splash.style.display = 'block';
         progressBar.style.width = '0%';
 
-        cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () {
-            splash.style.display = 'none';
-        });
+        function hideSplashOnLoadingScene () {
+            var scene = cc.director.getScene();
+            var sceneName = scene && scene.name;
+
+            if (sceneName !== 'Loading') {
+                return;
+            }
+
+            cc.director.off(cc.Director.EVENT_AFTER_SCENE_LAUNCH, hideSplashOnLoadingScene);
+
+            var splash = document.getElementById('splash');
+            if (!splash) {
+                return;
+            }
+
+            splash.style.transition = 'opacity 0.3s ease';
+            splash.style.opacity = '0';
+
+            setTimeout(function () {
+                splash.style.display = 'none';
+            }, 300);
+        }
+
+        cc.director.on(cc.Director.EVENT_AFTER_SCENE_LAUNCH, hideSplashOnLoadingScene);
     }
 
     var onStart = function () {
@@ -123,7 +144,7 @@ window.boot = function () {
 if (window.jsb) {
     var isRuntime = (typeof loadRuntime === 'function');
     if (isRuntime) {
-        require('src/settings.c0e38.js');
+        require('src/settings.86bca.js');
         require('src/cocos2d-runtime.js');
         if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
             require('src/physics.js');
@@ -131,7 +152,7 @@ if (window.jsb) {
         require('jsb-adapter/engine/index.js');
     }
     else {
-        require('src/settings.c0e38.js');
+        require('src/settings.86bca.js');
         require('src/cocos2d-jsb.js');
         if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
             require('src/physics.js');
