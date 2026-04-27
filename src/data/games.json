@@ -6,13 +6,12 @@
     "descriptionShort": "Arcade survival about switching orbits",
     "description": "Switch between orbits, dodge incoming hazards, collect bonuses, and survive as long as you can.",
     "cover": "images/orbit-dodge-cover.png",
+    "heroImage": "images/orbit-dodge-cover.png",
     "tags": [
       "Arcade",
       "Fast Sessions",
       "One Button"
     ],
-    "accentColor": "#ffd34d",
-    "heroImage": "images/orbit-dodge-cover.png",
     "controls": [
       "Tap / Space to switch orbit",
       "Avoid hazards",
@@ -23,6 +22,33 @@
       "Short survival sessions",
       "Ranks and best score progression"
     ],
+    "accentColor": "#ffd34d",
     "buildPath": "games/orbit-dodge/index.html"
+  },
+  {
+    "id": "monster-lines",
+    "title": "Monster Lines",
+    "subtitle": "Puzzle Web Game",
+    "description": "Move funny monsters across the board, make lines, clear groups, and keep the field alive.",
+    "descriptionShort": "Casual puzzle about matching monsters and clearing lines",
+    "cover": "images/monster-lines-cover.png",
+    "heroImage": "images/monster-lines-cover.png",
+    "tags": [
+      "Puzzle",
+      "Casual",
+      "Monsters"
+    ],
+    "controls": [
+      "Select a monster",
+      "Move it to an empty cell",
+      "Make lines to clear monsters"
+    ],
+    "features": [
+      "Bright cartoon puzzle gameplay",
+      "Simple rules with tactical decisions",
+      "Short and relaxing sessions"
+    ],
+    "accentColor": "#b7ff2a",
+    "buildPath": "games/monster-lines/index.html"
   }
 ]

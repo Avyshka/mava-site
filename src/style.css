@@ -45,7 +45,7 @@ a {
 }
 
 .hero {
-    max-width: 760px;
+    width: min(1120px, 100%);
     text-align: center;
 }
 
@@ -133,15 +133,15 @@ h1 {
 
 .games {
     margin-top: 52px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
     justify-content: center;
     gap: 24px;
-    flex-wrap: wrap;
 }
 
 .game-card {
     display: block;
-    width: min(420px, 100%);
+    width: 100%;
     border-radius: 28px;
     overflow: hidden;
     background: var(--panel);
