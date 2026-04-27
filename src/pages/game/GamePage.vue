@@ -12,11 +12,15 @@ const game = computed(() => {
   }
 
   return getGameById(gameId)
-});
+})
 </script>
 
 <template>
-  <main v-if="game" class="game-landing-page">
+  <main
+      v-if="game"
+      class="game-landing-page"
+      :style="{ '--game-accent': game.accentColor }"
+  >
     <section class="game-landing">
       <a class="back-link" :href="baseUrl">← Mava Studio</a>
 
@@ -38,17 +42,39 @@ const game = computed(() => {
 
           <div class="actions">
             <a class="button primary" :href="`${baseUrl}projects/${game.id}/play/`">
-              Play
+              Play Now
             </a>
           </div>
         </div>
 
-        <div class="game-cover">
+        <div class="game-cover game-cover-featured">
           <img
-              :src="`${baseUrl}${game.cover}`"
+              :src="`${baseUrl}${game.heroImage}`"
               :alt="`${game.title} screenshot`"
           />
         </div>
+      </div>
+
+      <div class="game-info-grid">
+        <section class="info-panel">
+          <h2>How to play</h2>
+
+          <ul>
+            <li v-for="item in game.controls" :key="item">
+              {{ item }}
+            </li>
+          </ul>
+        </section>
+
+        <section class="info-panel">
+          <h2>Features</h2>
+
+          <ul>
+            <li v-for="item in game.features" :key="item">
+              {{ item }}
+            </li>
+          </ul>
+        </section>
       </div>
     </section>
   </main>

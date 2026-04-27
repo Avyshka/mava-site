@@ -8,6 +8,10 @@ export type Game = {
     description: string;
     cover: string;
     tags: string[];
+    heroImage: string;
+    controls: string[];
+    features: string[];
+    accentColor: string;
     buildPath: string;
 }
 

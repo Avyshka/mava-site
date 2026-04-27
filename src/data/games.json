@@ -11,6 +11,18 @@
       "Fast Sessions",
       "One Button"
     ],
+    "accentColor": "#ffd34d",
+    "heroImage": "images/orbit-dodge-cover.png",
+    "controls": [
+      "Tap / Space to switch orbit",
+      "Avoid hazards",
+      "Collect bonuses"
+    ],
+    "features": [
+      "Fast one-button arcade gameplay",
+      "Short survival sessions",
+      "Ranks and best score progression"
+    ],
     "buildPath": "games/orbit-dodge/index.html"
   }
 ]
