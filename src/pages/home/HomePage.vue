@@ -28,9 +28,23 @@ const baseUrl = import.meta.env.BASE_URL;
             :key="game.id"
             class="game-card"
             :href="`${baseUrl}projects/${game.id}/`"
+            :style="{ '--game-accent': game.accentColor }"
         >
-          <h2>{{ game.title }}</h2>
-          <p>{{ game.descriptionShort }}</p>
+          <div class="game-card-cover">
+            <img
+                :src="`${baseUrl}${game.cover}`"
+                :alt="`${game.title} cover`"
+            />
+
+            <div class="game-card-overlay">
+              <span>View Game</span>
+            </div>
+          </div>
+
+          <div class="game-card-body">
+            <h2>{{ game.title }}</h2>
+            <p>{{ game.descriptionShort }}</p>
+          </div>
         </a>
       </div>
     </section>
