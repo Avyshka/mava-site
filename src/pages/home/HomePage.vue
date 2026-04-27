@@ -7,6 +7,12 @@ const baseUrl = import.meta.env.BASE_URL;
 <template>
   <main class="home-page">
     <section class="hero">
+      <img
+          class="logo"
+          :src="`${baseUrl}images/logo.png`"
+          alt="Mava Studio"
+      />
+
       <p class="eyebrow">Independent Game Studio</p>
 
       <h1>Mava Studio</h1>
