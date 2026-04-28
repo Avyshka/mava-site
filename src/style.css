@@ -127,8 +127,7 @@ h1 {
 .button.primary {
     color: #0f0f12;
     background: var(--game-accent);
-    box-shadow: 0 14px 34px rgba(255, 211, 77, 0.24),
-    inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+    box-shadow: 0 14px 34px color-mix(in srgb, var(--game-accent) 30%, transparent), inset 0 -3px 0 rgba(0, 0, 0, 0.18);
 }
 
 .games {
@@ -242,8 +241,21 @@ h1 {
 .game-landing-page {
     min-height: 100vh;
     padding: 48px 24px 72px;
-    background: radial-gradient(circle at 75% 16%, color-mix(in srgb, var(--game-accent) 18%, transparent), transparent 34%),
-    radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.05), transparent 36%),
+    background: radial-gradient(
+            circle at 78% 18%,
+            color-mix(in srgb, var(--game-accent) 24%, transparent),
+            transparent 36%
+    ),
+    radial-gradient(
+            circle at 12% 88%,
+            color-mix(in srgb, var(--game-accent) 10%, transparent),
+            transparent 34%
+    ),
+    radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.055),
+            transparent 38%
+    ),
     var(--bg);
 }
 
@@ -337,9 +349,8 @@ h1 {
 
 .game-cover-featured {
     transform: rotate(1deg);
-    border: 3px solid color-mix(in srgb, var(--game-accent) 75%, white 10%);
-    box-shadow: 0 34px 110px rgba(0, 0, 0, 0.52),
-    0 0 46px color-mix(in srgb, var(--game-accent) 24%, transparent);
+    border: 3px solid color-mix(in srgb, var(--game-accent) 70%, white 12%);
+    box-shadow: 0 34px 110px rgba(0, 0, 0, 0.52), 0 0 54px color-mix(in srgb, var(--game-accent) 26%, transparent);
 }
 
 .game-info-grid {
